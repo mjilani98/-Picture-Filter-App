@@ -1,19 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/light_silver"
     tools:context=".MainActivity">
 
-    <TextView
+    <ImageView
+        android:id="@+id/picture"
+        android:layout_width="300dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitCenter"/>
+
+
+    <!--grey-->
+    <Button
+        android:id="@+id/grey"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_below="@id/picture"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:backgroundTint="@color/royal_blue"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:text="Grey"
+        android:onClick="grey"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!--Black and white -->
+    <Button
+        android:id="@+id/blackWhite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/picture"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/grey"
+        android:layout_marginRight="20dp"
+        android:padding="10dp"
+        android:backgroundTint="@color/royal_blue"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:text="Blacl/W"
+        android:onClick="blackWhite"
+        />
+
+
+    <!--Green-->
+    <Button
+        android:id="@+id/green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/picture"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/grey"
+        android:layout_marginLeft="20dp"
+        android:padding="10dp"
+        android:backgroundTint="@color/royal_blue"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:text="Green "
+        android:onClick="green"
+        />
+
+
+    <!--Original-->
+    <Button
+        android:id="@+id/Original"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/green"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:backgroundTint="@color/royal_blue"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        android:text="Original "
+        android:onClick="original"
+        />
+</RelativeLayout>
